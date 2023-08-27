@@ -21,8 +21,18 @@ public class CyclicRotation {
         return a;
     }
 
+    public int[] solution2(int[] A, int K) {
+        if (A.length == K) return A;
+        int[] result = new int[A.length];
+        for (int i = 0; i < A.length; i++) {
+            result[(i + K) % A.length] = A[i];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         CyclicRotation rotation = new CyclicRotation();
-        System.out.println(rotation.solution(new int[] {3, 8, 9, 7, 6}, 3));
+        Arrays.stream(rotation.solution(new int[] {3, 8, 9, 7, 6}, 3)).forEach(System.out::println);
+        Arrays.stream(rotation.solution2(new int[] {3, 8, 9, 7, 6}, 3)).forEach(System.out::println);
     }
 }
