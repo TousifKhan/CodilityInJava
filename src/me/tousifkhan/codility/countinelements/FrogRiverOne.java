@@ -4,6 +4,7 @@ package me.tousifkhan.codility.countinelements;
 import java.util.HashSet;
 import java.util.Set;
 
+//https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/
 public class FrogRiverOne {
 
     public int solution(int X, int[] A) {
